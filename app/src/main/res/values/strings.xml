@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">ApplicationCoVoiturage</string>
+    <string name="titleConnexionFrag">Home</string>
+    <string name="titleSearchFrag">Search a travel</string>
+    <string name="titleDevFrag">In Development</string>
+    <string name="titleResultFrag">Travels results</string>
+    <string name="titleCreateTravelFrag">Create Travel</string>
+    <string name="titleSignInFrag">Sign In</string>
+    <string name="titleProfileFrag">Profile</string>
+    <string name="titleDetailsFrag">Details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="logo_of_the_car">logo of the car</string>
+    <string name="password">Password</string>
+    <string name="email">EMail</string>
+    <string name="sign_in">Sign In</string>
+    <string name="log_in">Log In</string>
+    <string name="city_of_departure">City of departure</string>
+    <string name="number_of_passengers">Number of passengers</string>
+    <string name="spinner_city_arrival">Arrival City</string>
+    <string name="search">Search</string>
+    <string name="display_all">Display All</string>
+    <string name="date">Date</string>
+    <string name="arrival">Arrival</string>
+    <string name="departure">Departure</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="dev_feature_text">This functionality is not available yet. We work to upgrade our application, come back later !</string>
+    <string name="imagedeveloppment" translatable="false">imageDeveloppment</string>
+    <string name="menu_text_search">Search</string>
+    <string name="menu_text_add">New Travel</string>
+    <string name="menu_text_self">My travels</string>
+    <string name="menu_text_profile">Profile</string>
+    <string name="checkBoxSpaceFix" translatable="false" />
+    <string name="welcomeMessage">Welcome to CEGEP %1$s</string>
+    <string name="resultFragmentTextViewMessage">From %1$s to %2$s</string>
+    <string name="toastRecyclerViewItemSelected">ID of the driver: %1$d</string>
+    <string name="placeRemaining">%1$d place(s) remaining</string>
+    <string name="button_deconnect_text">Log Out</string>
+    <string name="button_add_voyage_text">Add Travel</string>
+    <string name="stringTravelWillBeCreated">The travel will be created in the database</string>
+    <string name="stringUserWillBeCreated">The user will be created in the database</string>
+    <string name="startAddress">Start Address</string>
+    <string name="arrivalAddress">Arrival Address</string>
+    <string name="nameField">Name</string>
+    <string name="surnameField">Surname</string>
+    <string name="ageField">Age</string>
+    <string name="confirmPasswordField">Confirm Password</string>
+    <string name="phoneNumberField">Phone Number</string>
+    <string name="priceField">Price</string>
+    <string name="buttonJoinTravel">Join</string>
+    <string name="buttonLeaveTravel">Leave</string>
+    <string name="buttonApply">Apply</string>
+    <string name="stringChangedApplied">Applied</string>
+    <string name="fieldNote">Note</string>
+    <!-- Error section -->
+    <string name="errEmptyField">Empty field</string>
+    <string name="errNumberRange">Number have to be greater than 0</string>
+    <string name="errNaN">Not a number</string>
+    <string name="errErrHappenned">An error occurred, please try again</string>
+    <string name="errEmailError">EMail doesn\'t exists</string>
+    <string name="errPasswordError">Password incorrect</string>
+    <string name="errNumberRangeGTE">Number have to be greater or equal 0</string>
+    <string name="errEmailAlreadyExists">This email already exists</string>
+    <string name="errFieldPasswordNotMatch">Password have to be the same</string>
+    <!-- -->
+</resources>

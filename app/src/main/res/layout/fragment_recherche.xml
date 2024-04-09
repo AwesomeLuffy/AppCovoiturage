@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RechercheFragment" >
+
+    <CheckBox
+        android:id="@+id/radioButtonBagage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:drawableEnd="@drawable/luggage_mini"
+        android:gravity="center"
+        android:text=" "
+        android:textColor="#827717"
+        app:layout_constraintStart_toStartOf="@+id/datePickerDate"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerDate"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextNbrPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/number_of_passengers"
+        android:digits="0123456789"
+        android:inputType="numberSigned|textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextStartCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/city_of_departure"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNbrPass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextNbrPass"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNbrPass" />
+
+    <Spinner
+        android:id="@+id/spinnerCities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/spinner_city_arrival"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStartCity"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/editTextStartCity"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStartCity" />
+
+    <DatePicker
+        android:id="@+id/datePickerDate"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="15dp"
+        android:autofillHints=""
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerCities"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCities"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCities"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <CheckBox
+        android:id="@+id/radioButtonNoSmoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:drawableEnd="@drawable/no_smoking_mini"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/radioButtonBagage"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonBagage"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonBagage"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/search"
+        app:layout_constraintEnd_toEndOf="@+id/radioButtonAC"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/radioButtonBagage"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonNoSmoke" />
+
+    <Button
+        android:id="@+id/buttonDisplayAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/display_all"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSearch"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/buttonSearch"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearch" />
+
+    <TextView
+        android:id="@+id/textViewArrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/arrival"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerCities"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerCities"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerCities" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/date"
+        app:layout_constraintBottom_toBottomOf="@+id/datePickerDate"
+        app:layout_constraintEnd_toStartOf="@+id/datePickerDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/datePickerDate" />
+
+    <CheckBox
+        android:id="@+id/radioButtonAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:drawableEnd="@drawable/air_climatise_mini"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/radioButtonNoSmoke"
+        app:layout_constraintEnd_toEndOf="@+id/datePickerDate"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonNoSmoke"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonNoSmoke" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/connectionFragment">
+
+    <fragment
+        android:id="@+id/connectionFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.ConnectionFragment"
+        android:label="@string/titleConnexionFrag"
+        tools:layout="@layout/fragment_connection">
+        <action
+            android:id="@+id/action_connectionFragment_to_rechercheFragment"
+            app:destination="@id/rechercheFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_connectionFragment_to_inscriptionFragment"
+            app:destination="@id/inscriptionFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/rechercheFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.RechercheFragment"
+        android:label="@string/titleSearchFrag"
+        tools:layout="@layout/fragment_recherche">
+        <argument
+            android:name="argEmail"
+            android:defaultValue=" "
+            app:argType="string" />
+        <action
+            android:id="@+id/action_rechercheFragment_to_resultatFragment"
+            app:destination="@id/resultatFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_rechercheFragment_to_voyageFragment"
+            app:destination="@id/voyageFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultatFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.ResultatFragment"
+        android:label="@string/titleResultFrag"
+        tools:layout="@layout/fragment_resultat">
+        <argument
+            android:name="argRechercheObject"
+            app:argType="com.yrenard.applicationcovoiturage.model.Recherche" />
+        <action
+            android:id="@+id/action_resultatFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/developpementFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.DeveloppementFragment"
+        android:label="@string/titleDevFrag"
+        tools:layout="@layout/fragment_developpement" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.ProfileFragment"
+        android:label="@string/titleProfileFrag"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/voyageFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.VoyageFragment"
+        android:label="@string/titleCreateTravelFrag"
+        tools:layout="@layout/fragment_voyage" />
+    <fragment
+        android:id="@+id/inscriptionFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.InscriptionFragment"
+        android:label="@string/titleSignInFrag"
+        tools:layout="@layout/fragment_inscription">
+        <action
+            android:id="@+id/action_inscriptionFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.yrenard.applicationcovoiturage.fragment.DetailsFragment"
+        android:label="@string/titleDetailsFrag"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="argVoyage"
+            app:argType="com.yrenard.applicationcovoiturage.model.Voyage" />
+    </fragment>
+</navigation>

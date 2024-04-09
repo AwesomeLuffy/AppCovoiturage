@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.VoyageFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+
+    <CheckBox
+                android:id="@+id/radioButtonNoSmoke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:drawableEnd="@drawable/no_smoking_mini"
+                android:text=" "
+                app:layout_constraintBottom_toBottomOf="@+id/radioButtonBagage"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonBagage"
+                app:layout_constraintTop_toTopOf="@+id/radioButtonBagage"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <EditText
+                android:id="@+id/editTextNbrPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/number_of_passengers"
+                android:inputType="numberSigned|textPersonName"
+                android:digits="0123456789"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="@string/departure"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextStartCity"
+                app:layout_constraintEnd_toStartOf="@+id/editTextStartCity"
+                app:layout_constraintTop_toTopOf="@+id/editTextStartCity"
+                app:layout_constraintVertical_bias="0.482" />
+
+            <EditText
+                android:id="@+id/editTextStartCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/city_of_departure"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                app:layout_constraintEnd_toEndOf="@+id/editTextNbrPass"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextNbrPass"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNbrPass" />
+
+            <Spinner
+                android:id="@+id/spinnerCities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:contentDescription="@string/spinner_city_arrival"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextStartAddress"
+                app:layout_constraintStart_toStartOf="@+id/editTextStartAddress"
+                app:layout_constraintTop_toBottomOf="@+id/editTextStartCity" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/date"
+                app:layout_constraintBottom_toBottomOf="@+id/datePickerDate"
+                app:layout_constraintEnd_toStartOf="@+id/datePickerDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/datePickerDate" />
+
+            <CheckBox
+                android:id="@+id/radioButtonAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableEnd="@drawable/air_climatise_mini"
+                android:text=" "
+                app:layout_constraintBottom_toBottomOf="@+id/radioButtonNoSmoke"
+                app:layout_constraintEnd_toEndOf="@+id/datePickerDate"
+                app:layout_constraintHorizontal_bias="0.581"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonNoSmoke"
+                app:layout_constraintTop_toTopOf="@+id/radioButtonNoSmoke" />
+
+    <DatePicker
+        android:id="@+id/datePickerDate"
+        android:layout_width="251dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextArrivalAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextArrivalAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextArrivalAddress"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <EditText
+                android:id="@+id/editTextStartAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/startAddress"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                app:layout_constraintEnd_toEndOf="@+id/editTextStartCity"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextStartCity"
+                app:layout_constraintTop_toBottomOf="@+id/editTextStartCity" />
+
+            <EditText
+                android:id="@+id/editTextArrivalAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/arrivalAddress"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerCities"
+                app:layout_constraintStart_toStartOf="@+id/spinnerCities"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCities" />
+
+            <TextView
+                android:id="@+id/textViewArrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/arrival"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerCities"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerCities"
+                app:layout_constraintHorizontal_bias="0.464"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerCities"
+                app:layout_constraintVertical_bias="0.517" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:text="@string/button_add_voyage_text"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPrice"
+        app:layout_constraintStart_toEndOf="@+id/editTextPrice"
+        app:layout_constraintTop_toTopOf="@+id/editTextPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+                android:id="@+id/radioButtonBagage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:drawableEnd="@drawable/luggage_mini"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="#827717"
+                app:layout_constraintStart_toStartOf="@+id/datePickerDate"
+                app:layout_constraintTop_toBottomOf="@+id/datePickerDate"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/priceField"
+        android:digits="012345689."
+        android:inputType="numberSigned|textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonNoSmoke" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
